@@ -114,6 +114,23 @@ export const networkConfigs = {
       portisDappId ? { id: 'portis', conf: portisDappId } : null,
     ].filter(p => p),
   },
+  aragonchain: {
+    addresses: {
+      ensRegistry:
+        localEnsRegistryAddress || '0x96661e0CBB4E5Fd9608f11c12D411F9661851012',
+    },
+    nodes: {
+      defaultEth: 'ws://localhost:8545',
+    },
+    settings: {
+      chainId: 8,
+      name: 'Aragon Chain',
+      shortName: 'aragonchain',
+      type: 'private',
+      live: false,
+    },
+    providers: [{ id: 'provided' }, { id: 'frame' }],
+  },
   unknown: {
     addresses: {
       ensRegistry: localEnsRegistryAddress,
